@@ -5,9 +5,9 @@
     python3 -m venv env
 ```
 
-## Create a virtual env (ubuntu)
+## Activate the env
 ``` bash
-    python3 -m venv env
+    source env/bin/activate
 ```
 
 ## Install dependencies
