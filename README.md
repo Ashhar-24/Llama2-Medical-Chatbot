@@ -7,7 +7,7 @@
 
 ## Create a virtual env (ubuntu)
 ``` bash
-    python3 -m venv mchatbot
+    python3 -m venv env
 ```
 
 ## Install dependencies
