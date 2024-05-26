@@ -28,8 +28,6 @@ def set_custom_prompt():
     return prompt
 
 # Loading the model
-
-
 def load_llm():
     # Load the locally downloaded model here
     llm = CTransformers(
@@ -54,7 +52,6 @@ def retrieval_qa_chain(llm, prompt, db):
 
 # QA Model Function
 
-
 def qa_bot():
     embeddings = HuggingFaceEmbeddings(model_name='sentence-transformers/all-MiniLM-L6-v2',
                                        model_kwargs={'device': 'cpu'})
@@ -67,15 +64,13 @@ def qa_bot():
 
 # output function
 
-
 def final_result(query):
     qa_result = qa_bot()
     response = qa_result({'query': query})
     return response
 
+
 # chainlit code
-
-
 @cl.on_chat_start
 async def start():
     chain = qa_bot()
